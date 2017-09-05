@@ -3,14 +3,6 @@
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
-
--- -----------------------------------------------------
--- Schema mydb
--- -----------------------------------------------------
--- -----------------------------------------------------
--- Schema employee
--- -----------------------------------------------------
-
 -- -----------------------------------------------------
 -- Schema employee
 -- -----------------------------------------------------
@@ -84,7 +76,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `employee`.`projectemployee` (
   `project_id` INT NOT NULL,
-  `employee_id` INT NOT NULL,
+  `employee_id` INT NOT NULL UNIQUE,
   `created_date` DATETIME NOT NULL,
   `created_by_id` INT NOT NULL,
   `modified_by_id` INT NULL DEFAULT NULL,
